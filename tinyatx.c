@@ -27,7 +27,7 @@ static void heartbeat(unsigned long data)
 
 }
 
-static int __init tinyatxmod_init(void)
+static int __init tinyatx_init(void)
 {
   int ret = 0;
 
@@ -50,7 +50,7 @@ static int __init tinyatxmod_init(void)
 }
 
 
-static void __exit tinyatxmod_exit(void)
+static void __exit tinyatx_exit(void)
 {
   printk(KERN_INFO "%s stopped\n", __func__);
   del_timer_sync(&heartbeat_timer);
@@ -62,5 +62,5 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Mateusz Bajorski");
 MODULE_DESCRIPTION("Watchdog for tinyatx");
 
-module_init(tinyatxmod_init);
-module_exit(tinyatxmod_exit);
+module_init(tinyatx_init);
+module_exit(tinyatx_exit);

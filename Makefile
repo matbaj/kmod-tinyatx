@@ -1,4 +1,4 @@
-obj-m += tinyatxmod.o 
+obj-m += tinyatx.o 
 ksrc   = "/usr/lib/modules/3.12.24-1-ARCH/build"
 sysr   = "/"
 mdir   = "kernel/drivers/watchdog"
